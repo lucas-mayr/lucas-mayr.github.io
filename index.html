@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Lucas Mayr</title>
+  <meta name="description"
+    content="Personal website of Lucas Mayr, a computer scientist that
+             specializes in public key infrastructure and cryptography.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base target="_blank">
+
+  <!-- Dwarf Fortress Icon -->
+  <link rel="icon" sizes="16x16 32x32 48x48" href="static/debug.ico">
+  <link rel="stylesheet" type="text/css" href="static/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- SVG definitions from FontAwesome 5.15, licensed under CC-BY-4.0 -->
+  <!-- https://fontawesome.com/license -->
+  <svg class="sy">
+    <symbol id="github" viewBox="0 0 496 512">
+      <g>
+        <path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path>
+      </g>
+    </symbol>
+  </svg>
+  <svg class="sy">
+    <symbol id="email" viewBox="0 0 512 512">
+      <g>
+        <path fill="currentColor" d="M176 216h160c8.84 0 16-7.16 16-16v-16c0-8.84-7.16-16-16-16H176c-8.84 0-16 7.16-16 16v16c0 8.84 7.16 16 16 16zm-16 80c0 8.84 7.16 16 16 16h160c8.84 0 16-7.16 16-16v-16c0-8.84-7.16-16-16-16H176c-8.84 0-16 7.16-16 16v16zm96 121.13c-16.42 0-32.84-5.06-46.86-15.19L0 250.86V464c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V250.86L302.86 401.94c-14.02 10.12-30.44 15.19-46.86 15.19zm237.61-254.18c-8.85-6.94-17.24-13.47-29.61-22.81V96c0-26.51-21.49-48-48-48h-77.55c-3.04-2.2-5.87-4.26-9.04-6.56C312.6 29.17 279.2-.35 256 0c-23.2-.35-56.59 29.17-73.41 41.44-3.17 2.3-6 4.36-9.04 6.56H96c-26.51 0-48 21.49-48 48v44.14c-12.37 9.33-20.76 15.87-29.61 22.81A47.995 47.995 0 0 0 0 200.72v10.65l96 69.35V96h320v184.72l96-69.35v-10.65c0-14.74-6.78-28.67-18.39-37.77z"></path>
+      </g>
+    </symbol>
+  </svg>
+  <svg class="sy">
+    <symbol id="badge" viewBox="0 0 384 512">
+      <g>
+        <path fill="currentColor" d="M336 0H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zM144 32h96c8.8 0 16 7.2 16 16s-7.2 16-16 16h-96c-8.8 0-16-7.2-16-16s7.2-16 16-16zm48 128c35.3 0 64 28.7 64 64s-28.7 64-64 64-64-28.7-64-64 28.7-64 64-64zm112 236.8c0 10.6-10 19.2-22.4 19.2H102.4C90 416 80 407.4 80 396.8v-19.2c0-31.8 30.1-57.6 67.2-57.6h5c12.3 5.1 25.7 8 39.8 8s27.6-2.9 39.8-8h5c37.1 0 67.2 25.8 67.2 57.6v19.2z"></path>
+      </g>
+    </symbol>
+  </svg>
+  <svg class="sy">
+    <symbol id="file" viewBox="0 0 384 512">
+      <g>
+        <path fill="currentColor" d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm64 236c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12v8zm0-64c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12v8zm0-72v8c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12zm96-114.1v6.1H256V0h6.1c6.4 0 12.5 2.5 17 7l97.9 98c4.5 4.5 7 10.6 7 16.9z"></path>
+      </g>
+    </symbol>
+  </svg>
+  <svg class="sy">
+    <symbol id="code" viewBox="0 0 384 512">
+      <g>
+        <path fill="currentColor" d="M384 121.941V128H256V0h6.059c6.365 0 12.47 2.529 16.971 7.029l97.941 97.941A24.005 24.005 0 0 1 384 121.941zM248 160c-13.2 0-24-10.8-24-24V0H24C10.745 0 0 10.745 0 24v464c0 13.255 10.745 24 24 24h336c13.255 0 24-10.745 24-24V160H248zM123.206 400.505a5.4 5.4 0 0 1-7.633.246l-64.866-60.812a5.4 5.4 0 0 1 0-7.879l64.866-60.812a5.4 5.4 0 0 1 7.633.246l19.579 20.885a5.4 5.4 0 0 1-.372 7.747L101.65 336l40.763 35.874a5.4 5.4 0 0 1 .372 7.747l-19.579 20.884zm51.295 50.479l-27.453-7.97a5.402 5.402 0 0 1-3.681-6.692l61.44-211.626a5.402 5.402 0 0 1 6.692-3.681l27.452 7.97a5.4 5.4 0 0 1 3.68 6.692l-61.44 211.626a5.397 5.397 0 0 1-6.69 3.681zm160.792-111.045l-64.866 60.812a5.4 5.4 0 0 1-7.633-.246l-19.58-20.885a5.4 5.4 0 0 1 .372-7.747L284.35 336l-40.763-35.874a5.4 5.4 0 0 1-.372-7.747l19.58-20.885a5.4 5.4 0 0 1 7.633-.246l64.866 60.812a5.4 5.4 0 0 1-.001 7.879z"></path>
+      </g>
+    </symbol>
+  </svg>
+  <svg class="sy">
+    <symbol id="link" viewBox="0 0 512 512">
+      <g>
+        <path fill="currentColor" d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"></path>
+      </g>
+    </symbol>
+  </svg>
+  <svg class="sy">
+    <symbol id="linked" viewBox="0 0 448 512">
+      <g>
+        <path fill="currentColor" d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"/>
+      </g>
+    </symbol>
+  </svg>
+
+  <header class="h c">
+    <div class="si">
+      <h1 class="sn">Lucas Mayr
+        <svg class="sb" aria-hidden="true" focusable="false" role="img">
+          <a href="https://repo.mayr.sh">
+            <use xlink:href="#github" />
+          </a>
+        </svg>
+        <svg class="sb" aria-hidden="true" focusable="false" role="img">
+          <a href="mailto:lucas.mayr.athayde@gmail.com">
+            <use xlink:href="#email" />
+          </a>
+        </svg>
+        <svg class="sb" aria-hidden="true" focusable="false" role="img">
+          <a href="static/cv.pdf">
+            <use xlink:href="#badge" />
+          </a>
+        </svg>
+        <svg class="sb" aria-hidden="true" focusable="false" role="img">
+          <a href="https://linkedin.mayr.sh">
+            <use xlink:href="#linked" />
+          </a>
+        </svg>
+      </h1>
+      <p class="sd">
+        I am a cybersecurity architect at 
+        <a href=https://onrcpn.org.br/>ON-RCPN</a> and researcher at the
+        <a href="https://labsec.ufsc.br">Computer Security Lab</a> of the
+        <a href="https://ufsc.br">Universidade Federal de Santa Catarina</a>.
+        I research calsssical and post-quantum digital signature in the context
+        of increasing transparency and usability for the general population for
+        the signing of digital documents and manage the ON-RCPN PKI infrastructure.
+      </p>
+    </div>
+    <div class="sa">
+      <img src="static/avatar.jpg" width="128" height="128" alt="">
+    </div>
+  </header>
+
+  <main class="c">
+    <details>
+      <summary> THIS PAGE IS UNDER CONSTRUCTION </summary>
+    <h3>Publications & Patents</h3>
+    <details>
+      <summary>
+        PLACEHOLDER
+      </summary>
+      <ul>
+        <li>
+          L. Mayr, L. Palma, G. Zambonin, W. Silvano, and R. Custódio.
+          <u>Monitoring key pair usage through distributed ledgers and one-time
+          signatures</u>. <i>Information</i>, 14(10):523–537, September 2023.
+          <a href="https://doi.org/10.3390/info14100523">
+              <code>doi:10.3390/info14100523</code></a>
+        </li>
+        <li>
+          L. Mayr. <span title="Implementing a library to provide Winternitz signatures with
+              lightweight primitive using the Rust Programming
+              Language"> Implementing a library to provide Winternitz signatures with
+              lightweight primitive using the Rust Programming Language</span>.
+              Bachelor thesis. Universidade Federal de Santa Catarina, May
+              2021.
+              <svg class="sb" aria-hidden="true" focusable="false" role="img">
+                <a href="https://repositorio.ufsc.br/handle/123456789/187875">
+                  <use xlink:href="#file" />
+                </a>
+              </svg>
+        </li>
+      </ul>
+    </details>
+    <h3>Academic activities</h3>
+    <details>
+      <summary>
+        Placeholder
+      </summary>
+      <ul>
+        <li>
+          Teaching assistantships
+          <ul>
+            <li>
+              <p class="sn">
+                [Aug/2021–Nov/2021]
+                INE5429 Computer Security
+              </p>
+              <p class="d">
+                Class no. 07208 of the Graduate Program in Computer
+                Science at UFSC.
+              </p>
+            </li>
+          </ul>
+        </li>
+        <li>
+          Involvement in BSc theses
+          <ul>
+            <li>
+              <p class="sn">
+                [Jul/2022-Jul/2023] Co-supervision of
+                Gabriel Aristeu Cabral
+              </p>
+              <p class="d">
+                BSc in Information Systems at UFSC.
+                Thesis named
+                <a href="https://repositorio.ufsc.br/handle/123456789/248496">
+                  Assinatura de Documentos com Certificado de Uso Único e 
+                  Chaves Geradas no Cliente</a>.
+              </p>
+            </li>
+            <li>
+              <p class="sn">
+                [Mar/2022-Jul/2023] Co-supervision of
+                Arthur Gabriel Crippa Milanez
+              </p>
+              <p class="d">
+                BSc in Computer Science at UFSC.
+                Thesis named
+                <a href="https://repositorio.ufsc.br/handle/123456789/248907">
+                  Cripparency: Protocolo Baseado em Certificate Transparency 
+                  para Rastreabilidade de Certificados de Uso Único Utilizando
+                  Blockchain</a>.
+              </p>
+            </li>
+            <li>
+              <p class="sn">
+                [Aug/2019–May/2021] Member of evaluation board of
+                Arthur Moreira Rodrigues Alves
+              </p>
+              <p class="d">
+                BSc in Computer Science at UFSC.
+                Thesis named
+                <a href="https://repositorio.ufsc.br/handle/123456789/243456">
+                  Serviço de emissão de certificados digitais com base em 
+                  dados de CNHs digitais.</a>.
+              </p>
+            </li>
+            <li>
+              <p class="sn">
+                [Aug/2019–May/2021] Member of evaluation board of
+                Guilherme de Moraes Sartori 
+              </p>
+              <p class="d">
+                BSc in Computer Science at UFSC.
+                Thesis named
+                <a href="https://repositorio.ufsc.br/handle/123456789/237988">
+                  Software de Código Aberto para Prestadores de Serviço de 
+                  Confiança</a>.
+              </p>
+            </li>
+          </ul>
+        </li>
+        <li>
+          Miscellaneous activities
+          <ul>
+            <li>
+              <p class="sn">
+                [Jun/2021] Speaker
+              </p>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </details>
+    <h3>Professional experience</h3>
+    <details open>
+      <summary>
+        I work as the cybersecurity architect at the <em>Operador Nacional do
+        Registro Civil de Pessoas Naturais do Brasil (ONRCPN)</em>, the agency
+        responsible for the technological advancements of the Brazilian Civil
+        Registry. Moreover, I research topics related to cryptography and public
+        key infrastructure and work as a freelance in these subjects.
+
+      </summary>
+      <ul>
+        <li>
+          <p class="sn">[Jan/2021–Today] Cybersecurity Architect (Fulltime)</p>
+          <p class="d">
+          PLACEHOLDER
+          </p>
+        </li>
+        <li>
+          <p class="sn">[Mar/2021–Today] Cybersecurity architect (Freelance)</p>
+          <p class="d">
+          PLACEHOLDER
+          </p>
+        </li>
+        <li>
+          <p class="sn">[Aug/2020–Jun/2023] Project manager</p>
+          <p class="d">
+          PLACEHOLDER
+          </p>
+        </li>
+        <li>
+          <p class="sn">[Jul/2017–Aug/2020] Software developer</p>
+          <p class="d">
+          PLACEHOLDER
+          </p>
+        </li>
+      </ul>
+    </details>
+    <h3>Humanitarian Work</h3>
+    <details open>
+      <summary>
+        I and am involved in humanitarian projects in Africa related to electronic documents and digital signatures.
+      </summary>
+      <ul>
+        <li>
+          <p class="sn">[Jan/2021–Today] MZ</p>
+          <p class="d">
+            PLACEHOLDER
+          </p>
+        </li>
+      </ul>
+    </details>
+    </details>
+    <p>
+      With respects to other domains of computer science, I am always eager to
+      learn about constraint programming, optimization techniques, physics
+      computer simulations, and quantum computing. Ouside the realm of computer
+      science, I deeply enjoy tabletop RPG (scheduling issues notwhistanding),
+      historical and fantasy fiction, and some Dwarf Fortress <a href=https://dwarffortresswiki.org/index.php/DF2014:Fun>shenanigans</a>.
+    </p>
+  </main>
+
+  <footer class="f">
+    Last updated in 2024-03-14 &middot; Content is
+    <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a>
+  </footer>
+</body>
+
+</html>
+
